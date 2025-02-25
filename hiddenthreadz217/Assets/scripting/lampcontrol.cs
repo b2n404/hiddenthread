@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
+    public GameObject lamp;
+    private bool lightOn = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        lamp.SetActive(false);
     }
 
     // Update is called once per frame
@@ -19,12 +21,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Player")
+        if(other.tag == "Player")
         {
-            //lamp turns on when player jumps on button 
-            Debug.Log("lamp on!");
+            lamp.SetActive(true); // turns on lamp supposedly 
         }
     }
 }
