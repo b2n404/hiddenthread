@@ -21,9 +21,9 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "lampon")
+        if (collision.gameObject.tag == "Player")
         {
-            //lamp turns on when jumping on the collider tagged 'lampon' 
+            //lamp turns on when player jumps on button 
             Debug.Log("lamp on!");
         }
     }
