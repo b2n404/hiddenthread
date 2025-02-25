@@ -3,7 +3,6 @@ using UnityEngine;
 public class NewMonoBehaviourScript : MonoBehaviour
 {
     public GameObject lamp;
-    private bool lightOn = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
